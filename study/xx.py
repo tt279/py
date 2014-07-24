@@ -4,6 +4,8 @@ Created on 2014年7月1日
 
 @author: amssy
 '''
+import os
+
 dict8 = dict(x=1,y=2)
 dict9 = dict8.copy()
 #print dict8.setdefault('x',5)    #没有键添加，不做操作
@@ -32,3 +34,5 @@ f=open(r'E:\nginx.conf')
 #print sum([len(word) for line in f for word in line.split()])
 print sum(len(word) for line in f for word in line.split())
 
+print os.getenv('PATH')
+print  [x for x in os.listdir('.') if os.path.isfile(x) and os.path.splitext(x)[1]=='.py']
